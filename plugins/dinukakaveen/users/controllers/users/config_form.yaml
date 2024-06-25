@@ -1,0 +1,10 @@
+name: Users
+modelClass: DinukaKaveen\Users\Models\User
+form: $/dinukakaveen/users/models/user/fields.yaml
+defaultRedirect: dinukakaveen/users/users
+create:
+    redirect: 'dinukakaveen/users/users/update/:id'
+    redirectClose: dinukakaveen/users/users
+update:
+    redirect: dinukakaveen/users/users
+    redirectClose: dinukakaveen/users/users

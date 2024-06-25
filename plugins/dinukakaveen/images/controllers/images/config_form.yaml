@@ -1,0 +1,10 @@
+name: Images
+modelClass: DinukaKaveen\Images\Models\Image
+form: $/dinukakaveen/images/models/image/fields.yaml
+defaultRedirect: dinukakaveen/images/images
+create:
+    redirect: 'dinukakaveen/images/images/update/:id'
+    redirectClose: dinukakaveen/images/images
+update:
+    redirect: dinukakaveen/images/images
+    redirectClose: dinukakaveen/images/images

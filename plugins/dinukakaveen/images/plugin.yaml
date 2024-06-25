@@ -1,0 +1,11 @@
+plugin:
+    name: 'dinukakaveen.images::lang.plugin.name'
+    description: 'dinukakaveen.images::lang.plugin.description'
+    author: 'Dinuka Kaveen'
+    icon: oc-icon-image
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Images
+        url: dinukakaveen/images/images
+        icon: icon-image

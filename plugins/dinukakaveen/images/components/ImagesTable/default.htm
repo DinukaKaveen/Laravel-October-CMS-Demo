@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for image in images %}
+        <tr>
+            <td>{{ image.name }}</td>
+            <td>{{ image.description }}</td>
+            <td>
+                <a href="{{ image.image.path }}" target="_blank">
+                    <img src="{{ image.image.thumb(200, 200, {'mode':'auto'}) }}" alt="image">
+                </a>
+            </td>
+            <td><a href="post/{{ image.id }}">View</a></td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No images found!</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

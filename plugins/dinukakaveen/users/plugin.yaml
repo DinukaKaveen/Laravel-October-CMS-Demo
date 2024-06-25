@@ -1,0 +1,11 @@
+plugin:
+    name: 'dinukakaveen.users::lang.plugin.name'
+    description: 'dinukakaveen.users::lang.plugin.description'
+    author: 'Dinuka Kaveen'
+    icon: oc-icon-users
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Users
+        url: dinukakaveen/users/users
+        icon: icon-users

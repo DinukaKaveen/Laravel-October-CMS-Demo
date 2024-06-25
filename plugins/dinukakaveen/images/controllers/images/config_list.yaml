@@ -1,0 +1,12 @@
+title: Images
+modelClass: DinukaKaveen\Images\Models\Image
+list: $/dinukakaveen/images/models/image/columns.yaml
+recordUrl: 'dinukakaveen/images/images/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

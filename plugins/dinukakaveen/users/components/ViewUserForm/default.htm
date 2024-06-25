@@ -5,24 +5,40 @@
 {% framework %}
 
 <form data-request="onUpdate" data-request-files data-request-flash>
-    <div>
-        <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}">
+
+    <div class="mb-3">
+        <label for="first_name" class="form-label">First Name</label>
+        <input
+            type="text"
+            name="first_name"
+            class="form-control"
+            id="first_name"
+            value="{{ user.first_name }}"
+        />
     </div>
 
-    <div>
-        <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" id="last_name" value="{{ user.last_name }}">
+    <div class="mb-3">
+        <label for="last_name" class="form-label">Last Name</label>
+        <input
+            type="text"
+            name="last_name"
+            class="form-control"
+            id="last_name"
+            value="{{ user.last_name }}"
+        />
     </div>
 
-    <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" value="{{ user.email }}">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            value="{{ user.email }}"
+        />
     </div>
 
-    <br>
-
-    <button type="submit">Update</button>
-    <button type="submit" data-request="onDelete" data-request-confirm="Are you sure?">Delete</button>
-
+    <button type="submit" class="btn btn-warning">Update</button>
+    <button type="submit" class="btn btn-danger" data-request="onDelete" data-request-confirm="Are you sure?">Delete</button>
 </form>

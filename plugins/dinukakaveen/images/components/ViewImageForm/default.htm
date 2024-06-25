@@ -5,30 +5,59 @@
 {% framework %}
 
 <form data-request="onUpdate" data-request-files data-request-flash>
-    <div>
-        <label for="name">Image Name</label>
-        <input type="text" name="name" id="name" value="{{ image.name }}">
+    <div class="mb-3">
+        <label for="name" class="form-label">Image Name</label>
+        <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            value="{{ image.name }}"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+            class="form-control"
+            name="description"
+            id="description"
+            rows="3"
+        >{{ image.description }}</textarea>
     </div>
 
     <div>
-        <label for="description">Description</label>
-        <input type="text" name="description" id="description" value="{{ image.description }}">
-    </div>
-
-    <div>
-        <label for="image">Image Upload</label>
-        <input type="file" name="image" id="image" accept="image/*" data-request="onImageUpload" data-request-files data-request-flash>
+        <label for="image" class="form-label">Image Upload</label>
+        <input
+            class="form-control"
+            type="file"
+            name="image"
+            id="image"
+            accept="image/*"
+            data-request="onImageUpload"
+            data-request-files
+            data-request-flash
+        />
     </div>
     <br>
 
     <div id="imagePreview">
         {% if image.image %}
-            <img src="{{ image.image.thumb(300, 300, {'mode':'auto'}) }}" alt="image">
+        <img
+            src="{{ image.image.thumb(300, 300, {'mode':'auto'}) }}"
+            alt="image"
+        />
         {% endif %}
     </div>
     <br>
 
-    <button type="submit">Update</button>
-    <button type="submit" data-request="onDelete" data-request-confirm="Are you sure?">Delete</button>
-
+    <button type="submit" class="btn btn-warning">Update</button>
+    <button
+        class="btn btn-danger"
+        type="submit"
+        data-request="onDelete"
+        data-request-confirm="Are you sure?"
+    >
+        Delete
+    </button>
 </form>

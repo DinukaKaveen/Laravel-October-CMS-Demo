@@ -3,5 +3,11 @@ layout = "sidenavbar"
 title = "View User"
 
 [ViewUserForm]
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
 ==
+{% component 'session' %}
 {% component 'ViewUserForm' %}

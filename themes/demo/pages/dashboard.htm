@@ -5,7 +5,13 @@ title = "Dashboard"
 [UsersTable]
 
 [ImagesTable]
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
 ==
+{% component 'session' %}
 <h3>Users</h3>
 {% component 'UsersTable' %}
 <br><br>

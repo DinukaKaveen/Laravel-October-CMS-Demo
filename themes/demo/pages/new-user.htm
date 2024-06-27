@@ -3,7 +3,13 @@ layout = "sidenavbar"
 title = "New User"
 
 [CreateUserForm]
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
 ==
+{% component 'session' %}
 <h3>Create New User</h3>
 <br>
 {% component 'CreateUserForm' %}

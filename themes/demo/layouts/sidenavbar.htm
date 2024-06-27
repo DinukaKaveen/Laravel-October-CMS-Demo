@@ -1,9 +1,4 @@
-[session]
-security = "user"
-redirect = "login"
-checkToken = 0
 ==
-{% component 'session' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +16,7 @@ checkToken = 0
     ]|theme }}"></script>
 
     {% scripts %}
+    {% framework %}
     {% framework extras %}
 
     <style>
@@ -89,11 +85,17 @@ checkToken = 0
 <!-- Side Navbar -->
 <div class="sidebar" id="sidebar">
     <a class="navbar-brand" href="#">OCTOBER CMS</a>
+
+    {% if user %}
     <a href="/dashboard" class="nav-link">Dashboard</a>
     <a href="/new-user" class="nav-link">Create User</a>
     <a href="/new-post" class="nav-link">Create Post</a>
-    {% if user %}
     <a data-request="onLogout" data-request-data="{ redirect: '/login' }" class="nav-link">Sign out</a>
+    {% endif %}
+
+    {% if not user %}
+    <a href="/login" class="nav-link">Login</a>
+    <a href="/register" class="nav-link">Register</a>
     {% endif %}
 </div>
 

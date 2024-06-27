@@ -3,5 +3,11 @@ layout = "sidenavbar"
 title = "View Post"
 
 [ViewImageForm]
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
 ==
+{% component 'session' %}
 {% component 'ViewImageForm' %}

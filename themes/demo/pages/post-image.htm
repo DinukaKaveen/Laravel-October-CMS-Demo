@@ -3,7 +3,13 @@ layout = "sidenavbar"
 title = "Post Image"
 
 [NewImageForm]
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
 ==
+{% component 'session' %}
 <h3>Create New Post</h3>
 <br>
 {% component 'NewImageForm' %}

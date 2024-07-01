@@ -4,16 +4,11 @@ columns:
         type: text
         searchable: true
         sortable: true
-    name:
-        label: name
+    category:
+        label: category
         type: text
         searchable: true
         sortable: true
     description:
         label: description
-        type: text
-        searchable: true
-        sortable: true
-    categories_id:
-        label: categories_id
         type: text

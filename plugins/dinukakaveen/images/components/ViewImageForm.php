@@ -1,6 +1,7 @@
 <?php namespace DinukaKaveen\Images\Components;
 
 use Cms\Classes\ComponentBase;
+use DinukaKaveen\Images\Models\Categories;
 use DinukaKaveen\Images\Models\Image;
 use System\Models\File;
 use Input;
@@ -22,6 +23,8 @@ class ViewImageForm extends ComponentBase
     {
         $imageId = $this->param('id');
         $this->page['image'] = Image::find($imageId);
+
+        $this->page['categories'] = Categories::all();
     }
 
 
@@ -32,6 +35,7 @@ class ViewImageForm extends ComponentBase
 
         $image->name = Input::get('name');
         $image->description = Input::get('description');
+        $image->categories_id = Input::get('category');
         $image->image = Input::file('image');
         $image->save();
 

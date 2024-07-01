@@ -18,8 +18,17 @@ class Image extends Model
     // Relationship for image
     public $attachOne = [
 
-        'image' => 'System\Models\File'
+        'image' => 'System\Models\File',
 
+    ];
+
+    public $belongsTo = [
+
+        'categories' => [
+            'DinukaKaveen\Images\Models\Categories',
+            'table' => 'dinukakaveen_images_categories',
+            'order' => 'category'
+        ]
     ];
 
     /*

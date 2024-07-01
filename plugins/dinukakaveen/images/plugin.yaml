@@ -7,5 +7,14 @@ plugin:
 navigation:
     main-menu-item:
         label: Images
-        url: dinukakaveen/images/images
+        url: /
         icon: icon-image
+        sideMenu:
+            side-menu-item2:
+                label: Images
+                url: dinukakaveen/images/images
+                icon: icon-sitemap
+            side-menu-item:
+                label: Categories
+                url: dinukakaveen/images/categories
+                icon: icon-sitemap

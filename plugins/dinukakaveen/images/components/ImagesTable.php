@@ -1,6 +1,7 @@
 <?php namespace DinukaKaveen\Images\Components;
 
 use Cms\Classes\ComponentBase;
+use DinukaKaveen\Images\Models\Categories;
 use DinukaKaveen\Images\Models\Image;
 
 

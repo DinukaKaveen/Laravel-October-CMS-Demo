@@ -1,0 +1,10 @@
+fields:
+    category:
+        label: Category
+        span: auto
+        required: 1
+        type: text
+    description:
+        label: Description
+        span: auto
+        type: text

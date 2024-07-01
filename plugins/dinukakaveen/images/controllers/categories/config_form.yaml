@@ -1,0 +1,10 @@
+name: Categories
+modelClass: DinukaKaveen\Images\Models\Categories
+form: $/dinukakaveen/images/models/categories/fields.yaml
+defaultRedirect: dinukakaveen/images/categories
+create:
+    redirect: 'dinukakaveen/images/categories/update/:id'
+    redirectClose: dinukakaveen/images/categories
+update:
+    redirect: dinukakaveen/images/categories
+    redirectClose: dinukakaveen/images/categories

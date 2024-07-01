@@ -21,6 +21,16 @@
         >{{ image.description }}</textarea>
     </div>
 
+    <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-select" aria-label="Default select example" name="category" id="category">
+            <option selected>{{ image.categories.category }}</option>
+            {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.category }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
     <div>
         <label for="image" class="form-label">Image Upload</label>
         <input

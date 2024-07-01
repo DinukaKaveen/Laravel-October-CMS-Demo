@@ -3,3 +3,21 @@ v1.0.1:
 v1.0.2:
     - 'Created table dinukakaveen_images_'
     - builder_table_create_dinukakaveen_images_.php
+v1.0.3:
+    - 'Created table dinukakaveen_images_categories'
+    - builder_table_create_dinukakaveen_images_categories.php
+v1.0.4:
+    - 'Updated table dinukakaveen_images_categories'
+    - builder_table_update_dinukakaveen_images_categories.php
+v1.0.5:
+    - 'Updated table dinukakaveen_images_'
+    - builder_table_update_dinukakaveen_images_.php
+v1.0.6:
+    - 'Updated table dinukakaveen_images_categories'
+    - builder_table_update_dinukakaveen_images_categories_2.php
+v1.0.7:
+    - 'Updated table dinukakaveen_images_categories'
+    - builder_table_update_dinukakaveen_images_categories_3.php
+v1.0.8:
+    - 'Updated table dinukakaveen_images_'
+    - builder_table_update_dinukakaveen_images__2.php

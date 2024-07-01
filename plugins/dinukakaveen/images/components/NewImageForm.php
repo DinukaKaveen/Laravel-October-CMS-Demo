@@ -1,6 +1,7 @@
 <?php namespace DinukaKaveen\Images\Components;
 
 use Cms\Classes\ComponentBase;
+use DinukaKaveen\Images\Models\Categories;
 use DinukaKaveen\Images\Models\Image;
 use System\Models\File;
 use ValidationException;
@@ -18,6 +19,11 @@ class NewImageForm extends ComponentBase
         ];
     }
 
+    public function onRun()
+    {
+        $this->page['categories'] = Categories::all();
+    }
+
     public function onSubmit()
     {
 
@@ -25,6 +31,7 @@ class NewImageForm extends ComponentBase
 
         $image->name = Input::get('name');
         $image->description = Input::get('description');
+        $image->categories_id = Input::get('category');
         $image->image = Input::file('image');
         $image->save();
 

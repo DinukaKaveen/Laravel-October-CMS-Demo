@@ -3,6 +3,7 @@
         <tr>
             <th>NAME</th>
             <th>DESCRITION</th>
+            <th>CATEGORY</th>
             <th>IMAGE</th>
             <th>ACTION</th>
         </tr>
@@ -12,6 +13,7 @@
         <tr>
             <td>{{ image.name }}</td>
             <td>{{ image.description }}</td>
+            <td>{{ image.categories.category }}</td>
             <td>
                 <a href="{{ image.image.path }}" target="_blank">
                     <img

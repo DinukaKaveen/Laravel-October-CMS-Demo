@@ -90,12 +90,12 @@
     <a href="/dashboard" class="nav-link">Dashboard</a>
     <a href="/new-user" class="nav-link">Create User</a>
     <a href="/new-post" class="nav-link">Create Post</a>
+    <a href="/account" class="nav-link">Account</a>
     <a data-request="onLogout" data-request-data="{ redirect: '/login' }" class="nav-link">Sign out</a>
     {% endif %}
 
     {% if not user %}
     <a href="/login" class="nav-link">Login</a>
-    <a href="/register" class="nav-link">Register</a>
     {% endif %}
 </div>
 

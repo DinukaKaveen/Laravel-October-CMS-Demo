@@ -1,4 +1,59 @@
 {# Placeholder #}
-<h5>
-    Please see the documentation for detailed instructions on setting up the account component
-</h5>
+<form
+    method="post"
+    class="account-editor"
+    data-request="onUpdateProfile"
+    data-request-flash
+>
+    <div class="mb-3">
+        <label for="first_name" class="form-label">First Name</label>
+        <input
+            name="first_name"
+            id="first_name"
+            type="text"
+            value="{{ user.first_name }}"
+            class="form-control"
+            placeholder="First name"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="last_name" class="form-label">Last Name</label>
+        <input
+            name="last_name"
+            id="last_name"
+            type="text"
+            value="{{ user.last_name }}"
+            class="form-control"
+            placeholder="Last name"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+            name="email"
+            id="email"
+            type="email"
+            value="{{ user.email }}"
+            class="form-control"
+            placeholder="Email"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+            name="password"
+            id="password"
+            type="password"
+            class="form-control"
+            placeholder="Enter new password if you want to change it"
+        />
+    </div>
+
+
+    <button class="btn btn-primary" data-attach-loading type="submit">
+        Update Account
+    </button>
+</form>

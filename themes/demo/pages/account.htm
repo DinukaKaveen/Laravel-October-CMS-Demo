@@ -1,0 +1,18 @@
+url = "/account"
+layout = "sidenavbar"
+title = "Account"
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
+
+[account]
+==
+{% component 'session' %}
+<br>
+<center>
+    <h2>Account Details</h2>
+</center>
+<br>
+{% component 'account' %}

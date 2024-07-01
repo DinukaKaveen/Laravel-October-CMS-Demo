@@ -2,14 +2,13 @@ url = "/new-user"
 layout = "sidenavbar"
 title = "New User"
 
-[CreateUserForm]
-
 [session]
 security = "user"
 redirect = "login"
 checkToken = 0
+
+[registration]
 ==
-{% component 'session' %}
-<h3>Create New User</h3>
 <br>
-{% component 'CreateUserForm' %}
+{% component 'session' %}
+{% component 'registration' %}

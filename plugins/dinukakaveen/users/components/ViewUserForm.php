@@ -1,7 +1,7 @@
 <?php namespace DinukaKaveen\Users\Components;
 
 use Cms\Classes\ComponentBase;
-use DinukaKaveen\Users\Models\User;
+use RainLab\User\Models\User;
 use Flash;
 use Input;
 use Redirect;

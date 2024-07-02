@@ -36,7 +36,9 @@ class ViewImageForm extends ComponentBase
         $image->name = Input::get('name');
         $image->description = Input::get('description');
         $image->categories_id = Input::get('category');
-        $image->image = Input::file('image');
+        if (Input::hasFile('image')) {
+            $image->image = Input::file('image');
+        }
         $image->save();
 
         Flash::success('Image updated successfully');

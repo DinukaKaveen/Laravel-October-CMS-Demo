@@ -46,6 +46,7 @@ class Image extends Model
 
         'name' => 'required',
         'description' => 'required',
+        'categories_id' => 'required|exists:dinukakaveen_images_categories,id',
         'image' => 'required'
 
     ];

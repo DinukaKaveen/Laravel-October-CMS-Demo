@@ -1,7 +1,7 @@
 
 <form data-request="onUpdate" data-request-files data-request-flash>
     <div class="mb-3">
-        <label for="name" class="form-label">Image Name</label>
+        <label for="name" class="form-label">Title</label>
         <input
             type="text"
             name="name"
@@ -24,7 +24,7 @@
     <div class="mb-3">
         <label for="category" class="form-label">Category</label>
         <select class="form-select" aria-label="Default select example" name="category" id="category">
-            <option selected>{{ image.categories.category }}</option>
+            <option value="{{ image.categories.id }}" selected>{{ image.categories.category }}</option>
             {% for category in categories %}
             <option value="{{ category.id }}">{{ category.category }}</option>
             {% endfor %}
